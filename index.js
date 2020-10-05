@@ -1,15 +1,14 @@
 const express = require('express');
+const conectarDB = require('./config/db');
 
 //crear el servidor
 const app = express();
 
+//conectar con db
+conectarDB();
+
 //puerto de la app
 const PORT = process.env.PORT || 4000;
-
-//definir la pagina principal
-app.get('/', (req, res) => {
-  res.send('Hola Mundo')
-});
 
 //arranca app
 app.listen(PORT, () => {
