@@ -4,7 +4,7 @@ const proyectoController = require('../controllers/proyectoController');
 //crea proyectos
 //api proyectos
 router.post('/',
-  proyectoController.crearProyecto;
+  proyectoController.crearProyecto
 );
 
 module.exports = router;
